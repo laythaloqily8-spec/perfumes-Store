@@ -1,0 +1,160 @@
+/* ==========================================================================
+   تنسيقات صفحة إنشاء الحساب المحدثة كلياً لتطابق لقطة الشاشة
+   ========================================================================== */
+
+.login-body {
+    background-color: #F6EFE7;
+	background-image:url("../images/create.jpeg");
+	background-repeat:no-repeat;
+	background-size:cover;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.back-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #F6EFE7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-home:hover {
+    color: #bfa38a;
+}
+
+/* تصميم الصندوق ليكون ممتداً وأنيقاً مثل لقطة الشاشة */
+.login-container {
+    background-color: #ffffff; 
+    max-width: 480px;
+    margin: 40px auto; 
+    padding: 35px 35px;
+    text-align: center;
+    border: 1px solid rgba(90, 47, 22, 0.15); 
+    box-shadow: 0 4px 20px rgba(90, 47, 22, 0.08);
+}
+
+/* تنسيق هيدر اللوجو البني العلوي لتطابق الشاشة */
+.login-logo {
+    background-color: #5A2F16;
+    margin: -35px -35px 25px -35px;
+    padding: 15px;
+    border-bottom: 2px solid #422210;
+}
+
+.login-logo img {
+    height: 45px;
+    display: inline-block;
+}
+
+.login-container h2 {
+    font-family: playfair, serif;
+    color: #5A2F16;
+    margin: 0 0 8px 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.login-subtitle {
+    color: #5A2F16;
+    font-size: 14px;
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+/* تقسيم الحقول لجعل الفيرست نيم واللاست نيم بجانب بعضهما */
+.name-row {
+    display: block;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.half-width {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+}
+
+/* عمل مسافة بين الحقلين المتجاورين */
+.name-row .input-group:first-child {
+    margin-right: 3%;
+}
+
+.input-group {
+    text-align: left; 
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    color: #5A2F16;
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* تنسيق الحقول باللون البيج الفاتح مع الحواف الرمادية/البنية الناعمة */
+.input-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #c9bdae; 
+    background-color: #eae1d4; /* درجة بيج مطابقة تماماً للون الحقول في صورتكِ */
+    color: #5A2F16;
+    font-size: 14px;
+    box-sizing: border-box; 
+}
+
+.input-group input:focus {
+    outline: none;
+    background-color: #ffffff; 
+    border-color: #5A2F16;
+}
+
+/* تنسيق التشيك بوكس للنيوزلتر */
+.checkbox-group {
+    text-align: left;
+    margin: 15px 0 20px 0;
+}
+
+.checkbox-group input {
+    vertical-align: middle;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    color: #5A2F16;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* زر إنشاء الحساب البني العريض والمستطيل */
+.register-btn {
+    width: 100%;
+    background-color: #4A2713; /* لون بني غامق مطابق تماماً للزر في صورتكِ */
+    color: #F6EFE7;
+    padding: 12px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #5A2F16; 
+}
+
+.create-account-link a {
+    color: #5A2F16;
+    text-decoration: none;
+}
+
+.create-account-link a:hover {
+    color: #bfa38a;
+}

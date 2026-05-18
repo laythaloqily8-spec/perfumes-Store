@@ -1,0 +1,190 @@
+/* ==========================================================================
+   تنسيقات صفحة المتجر الفاخرة (Adenor Boutique Shopping Styles)
+   ========================================================================== */
+
+/* الخلفية العامة والخطوط لتتناسب مع هوية الموقع الفاخرة */
+.shop-body {
+    background-color: #F6EFE7;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif;
+    color: #5A2F16;
+}
+
+/* تصميم شريط التنقل العلوي الأنيق جداً */
+.navbar-fixed {
+    background-color: #5A2F16;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+ul.nav1 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+ul.nav1 li {
+    display: inline;
+    padding-right: 15px;
+}
+
+ul.nav1 li a {
+    text-decoration: none;
+    color: #F6EFE7;
+    transition: color 0.3s ease; 
+}
+
+/* تأثير الـ hover عند تمرير الماوس على روابط النيفبار */
+ul.nav1 li a:hover {
+    color: #bfa38a; 
+}
+
+ul.nav1 li img {
+    width: 80px;
+    vertical-align: middle;
+}
+
+/* تنسيق ترويسة المتجر وترحيب العملاء */
+.shop-header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+}
+
+.shop-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+}
+
+.shop-header p {
+    font-size: 16px;
+    font-style: italic;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* تصميم شبكة المنتجات (Products Grid) لتظهر بشكل مصفوفة متناسقة ومحاذية */
+.products-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* لتوسيط الكروت بداخل الحاوية */
+}
+
+/* كارت المنتج المنفرد الفاخر والمستوحى من تصميم لوحة البنات */
+.product-card {
+    background-color: #ffffff;
+    width: 30%;
+    display: inline-block;
+    margin: 1.5%;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid rgba(90, 47, 22, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(90, 47, 22, 0.08);
+}
+
+/* حاوية الصور لضمان تناسق أحجام كافة صور العطور المختلفة */
+.img-container {
+    width: 100%;
+    height: 280px;
+    background-color: #fcfcfc;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f1eae1;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* جعل الصور تملأ المساحة بدون تشويه */
+}
+
+.product-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    color: #4A2713;
+}
+
+.product-card .description {
+    font-size: 13px;
+    color: #7a6855;
+    height: 40px; /* لتثبيت المسافة السفلية حتى لو اختلف طول الوصف */
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+
+.product-card .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5A2F16;
+    margin-bottom: 15px;
+}
+
+/* تنسيق منطقة تحديد عدد العناصر (الكمية المطلوب شراؤها) */
+.quantity-area {
+    background-color: #eae1d4;
+    padding: 8px 12px;
+    overflow: hidden;
+}
+
+.quantity-area label {
+    font-size: 13px;
+    font-weight: bold;
+    float: left;
+    margin-top: 5px;
+}
+
+.quantity-area input {
+    width: 60px;
+    float: right;
+    padding: 4px;
+    border: 1px solid #c9bdae;
+    color: #5A2F16;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* تنسيق زر الشراء الكبير المأخوذ من الملفات (Press to Buy) */
+.buy-button-container {
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+
+.press-to-buy-btn {
+    background-color: #5A2F16;
+    color: #F6EFE7;
+    border: 2px solid #5A2F16;
+    padding: 15px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(90, 47, 22, 0.15);
+    transition: all 0.3s ease;
+}
+
+.press-to-buy-btn:hover {
+    background-color: #F6EFE7;
+    color: #5A2F16;
+}
+
+/* الفوتر */
+.shop-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #5A2F16;
+    color: #eae1d4;
+    font-size: 14px;
+}

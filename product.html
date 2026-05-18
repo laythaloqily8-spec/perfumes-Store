@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adenor - Product Detail</title>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/shopStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/shop-extras.css">
+</head>
+<body class="product-detail-body">
+
+    <nav class="navbar-fixed">
+        <ul class="nav1">
+            <li><img src="images/logoHOME.jpg" alt="Logo"></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="php/shop.php">Shop</a></li>
+            <li><a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-detail-container" id="product-detail-root">
+
+        <a href="php/shop.php" class="product-detail-back">&larr; Back to Shop</a>
+
+        <div class="product-detail-card" id="product-detail-card">
+            <!-- Dynamically populated from product data -->
+        </div>
+
+    </div>
+
+    <div class="shop-footer">
+        <p>&copy; 2026 Adenor Perfumes.</p>
+    </div>
+
+    <script src="js/cart.js"></script>
+    <script>
+        (function () {
+            'use strict';
+
+            var container = document.getElementById('product-detail-card');
+            var params = new URLSearchParams(window.location.search);
+            var productId = parseInt(params.get('id'), 10);
+
+            if (!productId || productId <= 0) {
+                container.innerHTML = '<p style="padding: 40px; text-align: center; color: #5A2F16;">No product specified. <a href="php/shop.php">Return to shop</a>.</p>';
+                return;
+            }
+
+            // Show loading state
+            container.innerHTML = '<p style="padding: 40px; text-align: center; color: #5A2F16;">Loading product details...</p>';
+
+            // Fetch product data from MySQL via PHP endpoint
+            console.debug('[Product] Fetching product id=' + productId);
+            fetch('php/get_product.php?id=' + productId + '&_t=' + Date.now())
+                .then(function (response) { return response.json(); })
+                .then(function (data) {
+                    console.debug('[Product] Response:', data);
+                    if (!data.success || !data.product) {
+                        container.innerHTML = '<p style="padding: 40px; text-align: center; color: #5A2F16;">Product not found. <a href="php/shop.php">Return to shop</a>.</p>';
+                        return;
+                    }
+
+                    var product = data.product;
+                    console.debug('[Product] Rendering:', product.name, '(id=' + product.id + ')');
+
+                    container.innerHTML =
+                        '<div class="product-detail-image">' +
+                            '<img src="' + product.image + '" alt="' + product.name + '">' +
+                        '</div>' +
+                        '<div class="product-detail-info">' +
+                            '<h1>' + product.name + '</h1>' +
+                            '<p class="description">' + (product.description || '') + '</p>' +
+                            '<p class="price">' + product.price.toFixed(2) + ' JD</p>' +
+                            '<button class="add-to-cart-btn" data-id="' + product.id + '">Add to Cart</button>' +
+                        '</div>';
+
+                    // Add to cart button handler
+                    document.querySelector('.add-to-cart-btn').addEventListener('click', function () {
+                        Cart.addItem(product.id, product.name, product.price, product.image);
+                        alert(product.name + ' has been added to your cart!');
+                    });
+                })
+                .catch(function () {
+                    container.innerHTML = '<p style="padding: 40px; text-align: center; color: #5A2F16;">Failed to load product. <a href="php/shop.php">Return to shop</a>.</p>';
+                });
+        })();
+    </script>
+</body>
+</html>

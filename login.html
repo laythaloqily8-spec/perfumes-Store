@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adenor Login</title>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/loginStyle.css">
+</head>
+<body class="login-body">
+
+    <a href="index.html" class="back-home">&larr; Back to Home</a>
+
+    <div class="login-container">
+        
+        <div class="login-logo">
+            <img src="images/logoHOME.jpg" alt="Adenor Logo">
+        </div>
+        
+        <h2>Welcome Back</h2>
+        <p class="login-subtitle">Login to unveil your signature scent</p>
+
+        <form action="php/login.php" method="POST">
+            <div class="input-group">
+                <label for="username">Email</label>
+                <input type="text" id="username" name="user_login" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="user_password" placeholder="Enter your password" required>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div class="create-account-link">
+            <a href="create-account.html">Click here to create account</a>
+        </div>
+        
+    </div>
+
+    <script src="js/login-validation.js"></script>
+    <script>
+        // Display success or error messages from URL parameters
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+
+            if (params.has('registered')) {
+                alert('Account created successfully! Please log in with your credentials.');
+                // Remove the parameter from the URL without reloading
+                history.replaceState(null, '', 'login.html');
+            }
+
+            if (params.has('error')) {
+                alert('Login failed:\\n\\n- ' + params.get('error'));
+                history.replaceState(null, '', 'login.html');
+            }
+        })();
+    </script>
+</body>
+</html>

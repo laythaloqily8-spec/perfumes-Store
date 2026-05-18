@@ -1,0 +1,103 @@
+/* ==========================================================================
+   تنسيقات صفحة الشكر على الشراء - بالأساسيات وخط Times New Roman
+   ========================================================================== */
+
+/* الخلفية العامة المتناسقة مع ثيم عطوركِ الفاخر */
+.thank-body {
+    background-color: #F6EFE7;
+	background-image:url("../images/thank.jpeg");
+	background-position:center;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif; /* الطريقة الصحيحة مع علامات التنصيص */
+    color: #5A2F16;
+}
+
+/* صندوق الرسالة المركزي الموزع بالهوامش العادية */
+.thank-container {
+    background-color: #ffffff;
+    max-width: 550px;
+    margin: 100px auto; /* لتوسيط الصندوق في منتصف الصفحة تماماً */
+    padding: 40px;
+    border: 1px solid #5A2F16; /* إطار بني عادي بديل للظلال */
+    text-align: center;
+}
+
+/* تصميم أيقونة صح (&check;) بشكل دائري بني ناعم */
+.success-icon {
+    font-size: 50px;
+    color: #F6EFE7;
+    background-color: #5A2F16;
+    width: 80px;
+    height: 80px;
+    line-height: 80px; /* لتوسيط الإشارة داخل الدائرة */
+    margin: 0 auto 20px auto; /* لتوسيط الدائرة برأس الصندوق */
+    border-radius: 50%; /* ميزة الدائرة العادية */
+}
+
+/* تنسيق العنوان الرئيسي */
+.thank-container h2 {
+    font-size: 28px;
+    color: #4A2713;
+    margin: 0 0 15px 0;
+}
+
+/* تنسيق نص الرسالة التسويقية */
+.thank-message {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* صندوق معلومات الفاتورة باللون البيج الفاتح المألوف بموقعكِ */
+.order-info {
+    background-color: #eae1d4;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 1px dashed #5A2F16; /* إطار منقّط ناعم لإعطاء مظهر الفاتورة */
+}
+
+.order-info p {
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* منطقة الأزرار أسفل الصندوق */
+.thank-buttons {
+    display: block;
+}
+
+/* التنسيق الأساسي المشترك للزرين */
+.thank-buttons a {
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* زر العودة للرئيسية - بني غامق */
+.btn-home {
+    background-color: #5A2F16;
+    color: #F6EFE7;
+    border: 2px solid #5A2F16;
+}
+
+.btn-home:hover {
+    background-color: #F6EFE7;
+    color: #5A2F16;
+}
+
+/* زر إكمال التسوق - شفاف بحدود بنية */
+.btn-shop {
+    background-color: transparent;
+    color: #5A2F16;
+    border: 2px solid #5A2F16;
+}
+
+.btn-shop:hover {
+    background-color: #5A2F16;
+    color: #F6EFE7;
+}

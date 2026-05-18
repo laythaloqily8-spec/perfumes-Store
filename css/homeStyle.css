@@ -1,0 +1,222 @@
+/* تنسيق عام للموقع ولون الخلفية البيج */
+body {
+    background-color: #F6EFE7;
+    margin: 0;
+	font-family: "Times New Roman", Times, serif;
+    padding-top: 70px; /* مسافة أعلى الصفحة لكي لا يختفي المحتوى خلف النيفبار الثابت */
+}
+
+/* تنسيق شريط التنقل وجعله يتحرك مع النزول */
+.navbar-fixed {
+    background-color: #5A2F16;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+ul.nav1 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+ul.nav1 li {
+    display: inline;
+    padding-right: 15px;
+}
+
+ul.nav1 li a {
+    text-decoration: none;
+    color: #F6EFE7;
+    transition: color 0.3s ease; 
+}
+
+/* تأثير الـ hover عند تمرير الماوس على روابط النيفبار */
+ul.nav1 li a:hover {
+    color: #bfa38a; 
+}
+
+ul.nav1 li img {
+    width: 80px;
+    vertical-align: middle;
+}
+
+/* جعل صورة العطر خلفية للسكشن والكتابة فوقها */
+.hero-section {
+    background-image: url("../images/heroHOME.png");
+    background-size: cover;
+    background-position: center;
+    height: 500px; 
+    position: relative;
+    margin-top: 0px;
+}
+
+/* محاذاة النص والزر فوق صورة الخلفية */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 70%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: "Times New Roman", Times, serif;
+    color: #5A2F16;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hero-content p a {
+    background-color: #5A2F16;
+    color: #F6EFE7;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* تأثير الـ hover على زر Shop Now */
+.hero-content p a:hover {
+    background-color: #422210;
+}
+
+/* تنسيق قسم About */
+.about-section {
+    padding: 40px;
+    text-align: center;
+    color: #5A2F16;
+}
+
+.about-section h2 {
+    font-family: playfair;
+}
+
+/* تنسيق قسم المميزات */
+.features-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #5A2F16;
+}
+
+.features-section h3 {
+    font-family: playfair;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.features-section ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.features-section ul li {
+    text-align: left;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.features-section ul li ::before {
+    content: "• ";
+    color: #5A2F16;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.features-section .quote {
+    text-align: center;
+    margin-top: 40px;
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* ديزاين الفوتر المحدث كلياً بلون بني */
+.footer-section {
+    background-color: #5A2F16;
+    color: #F6EFE7;
+    padding: 60px 20px 20px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-top h3 {
+    font-family: playfair;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-top p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* تنسيق زر Join now */
+.footer-top .join-box {
+    margin-bottom: 40px;
+}
+
+.footer-top .join-btn {
+    background-color: #F6EFE7;
+    color: #5A2F16;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* تأثير الـ hover على زر Join now */
+.footer-top .join-btn:hover {
+    background-color: #bfa38a;
+    color: #F6EFE7;
+}
+
+.footer-content {
+    margin-bottom: 40px;
+}
+
+/* تعديل عرض الأعمدة لتستوعب العمود الثالث لمواقع التواصل */
+.footer-column {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* جعلناها 30% ليتسع المكان لثلاثة أعمدة جنب بعضها بشكل منسق */
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #F6EFE7;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-column p {
+    margin: 8px 0;
+}
+
+.footer-column p a {
+    color: #F6EFE7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* تأثير الـ hover على روابط الفوتر عند مرور الماوس */
+.footer-column p a:hover {
+    color: #bfa38a; 
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid rgba(246, 239, 231, 0.2);
+    padding-top: 20px;
+    font-size: 14px;
+}

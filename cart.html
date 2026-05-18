@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adenor - Shopping Cart</title>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/shopStyle.css">
+    <link type="text/css" rel="stylesheet" href="css/shop-extras.css">
+</head>
+<body class="cart-body">
+
+    <nav class="navbar-fixed">
+        <ul class="nav1">
+            <li><img src="images/logoHOME.jpg" alt="Logo"></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="php/shop.php">Shop</a></li>
+            <li><a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-page-container">
+
+        <h2 class="cart-page-title">Your Shopping Cart</h2>
+        <p class="cart-page-subtitle">Review your selected fragrances before checkout</p>
+
+        <div id="cart-empty" class="cart-empty">
+            <p>Your cart is empty.</p>
+            <a href="php/shop.php">Browse Perfumes</a>
+        </div>
+
+        <div id="cart-items"></div>
+
+        <div id="cart-summary" class="cart-summary" style="display: none;">
+            <h3>Order Summary</h3>
+            <div class="cart-total-row">Total: <span id="cart-total">0.00 JD</span></div>
+            <button class="cart-checkout-btn" onclick="Cart.checkout()">Proceed to Checkout</button>
+        </div>
+
+    </div>
+
+    <div class="shop-footer">
+        <p>&copy; 2026 Adenor Perfumes.</p>
+    </div>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
