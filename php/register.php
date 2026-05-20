@@ -55,8 +55,8 @@ if (!preg_match('/^[A-Za-z\s]+$/', $last_name)) {
 }
 
 // Login ID: exactly 5 chars, must start with a letter, then letters, numbers, _ or $
-if (!preg_match('/^[A-Za-z][A-Za-z0-9_$]{4}$/', $login_id)) {
-    $errors[] = 'Login ID must be exactly 5 characters, start with a letter, and contain only letters, numbers, _ and $.';
+if (!preg_match('/^[A-Za-z]{4}$/', $login_id)) {
+    $errors[] = 'Login ID must be exactly 5 characters, start with a letter, and contain only letters.';
 }
 
 // Email format: use PHP's built-in validator
